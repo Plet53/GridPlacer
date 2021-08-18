@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<engine:UXML
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:engine="UnityEngine.UIElements"
+    xmlns:editor="UnityEditor.UIElements"
+
+xsi:noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd"
+xsi:schemaLocation="
+                        UnityEngine.UIElements ../../UIElementsSchema/UnityEngine.UIElements.xsd
+                        UnityEditor.UIElements ../../UIElementsSchema/UnityEditor.UIElements.xsd
+                        UnityEditor.PackageManager.UI ../../UIElementsSchema/UnityEditor.PackageManager.UI.xsd
+"
+>
+    <engine:VisualElement name="base" tooltip="Object to be cloned. Grid will start on it's position." >
+    <engine:Label text="Base Object: " />
+    <editor:ObjectField name="bo" />
+    </engine:VisualElement>
+    <engine:VisualElement name="base" tooltip="Number of rows in the X direction" >
+    <engine:Label text="X Axis Length" />
+    <editor:IntegerField  name="xLen" value="1" />
+    </engine:VisualElement>
+    <engine:VisualElement name="base" tooltip="Number of rows in the Y direction" >
+    <engine:Label text="Y Axis Length" />
+    <editor:IntegerField  name="yLen" value="1" />
+    </engine:VisualElement>
+    <engine:VisualElement name="base" tooltip="Number of rows in the Z direction" >
+    <engine:Label text="Z Axis Length" />
+    <editor:IntegerField  name="zLen" value="1" />
+    </engine:VisualElement>
+    <engine:VisualElement name="base">
+    <engine:Label text="Grid Offset" tooltip="Distance between each object. Uses a floating point number." />
+    <editor:FloatField name="offset" value="1" />
+    </engine:VisualElement>
+    <engine:VisualElement name="axes" tooltip="Selects which axes to operate over." >
+        <engine:Label text="Axes: " />
+        <engine:Toggle name="x" text="X " value="true" />
+        <engine:Toggle name="y" text="Y " />
+        <engine:Toggle name="z" text="Z" value="true" />
+    </engine:VisualElement>
+    <engine:Toggle name="head" text="Create Parent?" tooltip="Creates an invisible Parent object, which all objects in the grid will be set as children of." />
+    <engine:Button name="sq" text="Generate Square Grid" />
+    <engine:VisualElement name="oaxes" tooltip="For every other THIS value... " >
+        <engine:Label text="Offset Axis: " />
+        <engine:Toggle name="ox" text="X " value="true" />
+        <engine:Toggle name="oy" text="Y " />
+        <engine:Toggle name="oz" text="Z " />
+    </engine:VisualElement>
+    <engine:VisualElement name="aaxes" tooltip="Offset THIS Axis." >
+        <engine:Label text="Axis to Offset: " />
+        <engine:Toggle name="ax" text="X " />
+        <engine:Toggle name="ay" text="Y " />
+        <engine:Toggle name="az" text="Z " value="true" />
+    </engine:VisualElement>
+    <engine:Button name="hx" text="Generate Hex Grid" />
+</engine:UXML>

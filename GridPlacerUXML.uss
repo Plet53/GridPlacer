@@ -1,0 +1,28 @@
+:root {
+  padding-top: 2;
+  padding-bottom: 0;
+}
+IntegerField {
+  flex-grow: 1;
+}
+FloatField {
+  flex-grow: 1;
+}
+#axes {
+  flex-direction: row;
+}
+#oaxes {
+  flex-direction: row;
+}
+#aaxes {
+  flex-direction: row;
+}
+Label {
+  -unity-text-align: middle-left;
+}
+#base {
+  flex-direction: row;
+}
+#bo {
+  flex-grow: 1;
+}
